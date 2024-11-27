@@ -20,10 +20,7 @@ import useGetFlightsLocation from "@/hooks/flights/useGetFlightsLocation";
 const Filghts = () => {
   const { state, dispatch } = useReduxToolkit();
   const [filters, setFilters] = useState<Record<string, string>>({});
-  const [params, setParams] = useState<Record<string, any>>({
-    fromId: "BOM.AIRPORT",
-    toId: "DEL.AIRPORT"
-  });
+  const [params, setParams] = useState<Record<string, any>>({});
   const { success } = useToast();
 
   const [destinationParams, setDestinationParams] = useState<Record<string, any>>({
