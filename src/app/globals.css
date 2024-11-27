@@ -2,20 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "satoshi-medium";
+  src: url("./fonts/Satoshi-Medium.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "satoshi-regular";
+  src: url("./fonts/Satoshi-Regular.otf");
+}
+
+@font-face {
+  font-family: "satoshi-bold";
+  src: url("./fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: "satoshi-light";
+  src: url("./fonts/Satoshi-Light.otf");
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "satoshi-regular";
+  margin: 0; /* Reset default margin to ensure full coverage */
+  padding: 0; /* Reset default padding to ensure full coverage */
+}
+
+.loader {
+  animation: loader 1s infinite alternate;
+}
+
+@keyframes loader {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+.leavesAnime {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eef2f8;
+  display: none;
+}
+
+::-webkit-scrollbar-track:hover {
+  display: block;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #102e34;
+  border-radius: 12px;
+  display: block;
 }
