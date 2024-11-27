@@ -10,8 +10,6 @@ import { Button, Card, Collapse, Space } from "antd";
 import { Content } from "antd/es/layout/layout";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import banner from "../assets/images/banner.png";
-import Image from "next/image";
 
 const LandingPage = () =>{ 
   const { Panel } = Collapse;
@@ -44,7 +42,7 @@ const LandingPage = () =>{
       pageTitle={PAGE_NAMES.DASHBOARD}
     >
       <Content className="p-6 bg-gray-50">
-        <Image src={banner} alt="banner" />
+        <img src={'/banner.png'} className="w-full" alt="banner" />
         <Card className="mb-6">
           <h2 className="text-xl font-bold">Bahamas Family Trip</h2>
           <p>Add flights, hotels, or activities to your trip itinerary.</p>
@@ -58,7 +56,7 @@ const LandingPage = () =>{
                 <p>Build, personalize, and optimize your itineraries with our trip planner.</p>
               </div>
               <Link href={ROUTES.ACTIVITIES}>
-                <Button type="primary" className="bg-[#0D6EFD] w-full text-[#FFFFFF] h-12">Add Activities</Button>
+                <Button color="primary" className="bg-[#0D6EFD] w-full text-[#FFFFFF] h-12 border-0">Add Activities</Button>
               </Link>
             </div>
           </Card>
@@ -69,7 +67,7 @@ const LandingPage = () =>{
                 <p className="text-[#1D2433]">Build, personalize, and optimize your itineraries with our trip planner.</p>
               </div>
               <Link href={ROUTES.HOTELS}>
-                <Button type="primary" className="bg-[#0D6EFD] w-full text-[#FFFFFF] h-12">Add Hotels</Button>
+                <Button color="primary" className="bg-[#0D6EFD] w-full text-[#FFFFFF] h-12 border-0">Add Hotels</Button>
               </Link>
             </div>
           </Card>
@@ -80,7 +78,7 @@ const LandingPage = () =>{
                 <p>Build, personalize, and optimize your itineraries with our trip planner.</p>
               </div>
               <Link href={ROUTES.FLIGHTS}>
-                <Button type="primary" className="bg-[#FFFFFF] w-full text-[#0D6EFD] h-12">Add Flights</Button>
+                <Button color="primary" className="bg-[#FFFFFF] w-full text-[#0D6EFD] h-12 border-0">Add Flights</Button>
               </Link>
             </div>
           </Card>
